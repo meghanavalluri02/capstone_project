@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: <YOUR_ECR_REPO>/frontend:latest
+          image: capstone-ecr/frontend:latest
           ports:
             - containerPort: 3000

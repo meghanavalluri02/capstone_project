@@ -4,4 +4,5 @@ metadata:
   name: app-config
   namespace: ecommerce
 data:
-  FLASK_ENV: production
+  LOG_LEVEL: "info"
+  APP_MODE: "production"

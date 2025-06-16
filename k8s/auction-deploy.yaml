@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: auction
-          image: <YOUR_ECR_REPO>/auction:latest
+          image: capstone-ecr/auction:latest
           ports:
             - containerPort: 5003
           envFrom:

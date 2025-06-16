@@ -1,1 +1,25 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cart
+  namespace: ecommerce
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cart
+  template:
+    metadata:
+      labels:
+        app: cart
+    spec:
+      containers:
+        - name: cart
+          image: <YOUR_ECR_REPO>/cart:latest
+          ports:
+            - containerPort: 5002
+          envFrom:
+            - secretRef:
+                name: db-creds
+            - configMapRef:
+                name: app-config
